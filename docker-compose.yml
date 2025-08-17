@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:14
+    container_name: launchx_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: LaunchX
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - launchx_network
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: launchx_app
+    restart: always
+    ports:
+      - "5050:5050"
+    depends_on:
+      - db
+    environment:
+      - BOT_TOKEN=ТОКЕН
+      - CLICK_PAY_TOKEN=ТОКЕН
+      - DATABASE_URL=Подключение
+    networks:
+      - launchx_network
+    volumes:
+      - .:/LaunchX
+
+volumes:
+  postgres_data:
+
+networks:
+  launchx_network:

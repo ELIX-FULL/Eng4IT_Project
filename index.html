@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page-title">LaunchX - Система тревожных оповещений</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение шрифта Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Темный фон */
+            color: #c9d1d9; /* Светлый текст */
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #1d9bf0, #36a7ed, #9cc8e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] antialiased">
+<!-- Навигация -->
+<header class="sticky top-0 bg-[#0d1117]/80 backdrop-blur-sm z-50 shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <!-- Логотип LaunchX -->
+            <div class="w-8 h-8 rounded-full bg-#0d1117 flex items-center justify-center p-1">
+                <img src="assets/img.png" alt="LaunchX Logo" class="h-10 w-auto rounded-full">
+            </div>
+            <span class="text-xl font-bold text-white">LaunchX</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <!-- Кнопки переключения языка -->
+            <div class="flex space-x-2">
+                <button id="lang-ru"
+                        class="lang-button px-3 py-1 text-sm font-semibold rounded-full bg-[#161b22] text-[#8b949e] hover:bg-[#1d9bf0] hover:text-white transition duration-300">
+                    RU
+                </button>
+                <button id="lang-en"
+                        class="lang-button px-3 py-1 text-sm font-semibold rounded-full bg-[#161b22] text-[#8b949e] hover:bg-[#1d9bf0] hover:text-white transition duration-300">
+                    EN
+                </button>
+            </div>
+            <a href="#contact" data-translate="contact-button"
+               class="hidden md:inline-block px-4 py-2 bg-[#1d9bf0] text-white font-semibold rounded-full shadow-lg hover:bg-[#36a7ed] transition duration-300">
+                Связаться с нами
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Главный экран (Hero Section) -->
+<main class="min-h-screen flex items-center justify-center text-center p-4">
+    <div class="max-w-4xl mx-auto space-y-6">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight" data-translate="hero-title">
+            Ваша безопасность — <br class="hidden sm:inline"> наш приоритет.
+            <span class="text-gradient block md:inline">LaunchX.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-[#8b949e]" data-translate="hero-subtitle">
+            Мгновенные тревожные оповещения и надёжное управление устройствами через Telegram. Защитите то, что для вас
+            важно.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6">
+            <a href="#project-description" data-translate="hero-button-1"
+               class="w-full sm:w-auto px-8 py-3 bg-[#1d9bf0] text-white font-semibold rounded-full shadow-lg hover:bg-[#36a7ed] transition duration-300 transform hover:-translate-y-1">
+                Подробнее о проекте
+            </a>
+            <a href="#use-cases" data-translate="hero-button-2"
+               class="w-full sm:w-auto px-8 py-3 bg-white text-[#0d1117] font-semibold rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:-translate-y-1">
+                Примеры использования
+            </a>
+        </div>
+    </div>
+</main>
+
+<!-- Описание проекта -->
+<section id="project-description" class="py-20 bg-[#161b22]">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-10" data-translate="project-title">
+            О проекте LaunchX
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6 text-lg text-[#8b949e]" data-translate-group="project-description">
+                <p data-translate="project-p1">
+                    LaunchX — это интеллектуальная система мониторинга и экстренного оповещения. Мы выпускаем
+                    собственные физические устройства, такие как <span class="text-white font-semibold">тревожные браслеты и кнопки</span>,
+                    которые можно легко подключить к нашей системе.
+                </p>
+                <p data-translate="project-p2">
+                    С помощью нашего Telegram-бота вы можете легко управлять всеми своими устройствами, привязывать
+                    номера телефонов и Telegram-аккаунты близких или сотрудников. В случае активации устройства, система
+                    мгновенно отправит тревожное оповещение всем указанным получателям.
+                </p>
+                <p data-translate="project-p3">
+                    Наша цель — сделать современные технологии доступными и интуитивно понятными, чтобы каждый мог
+                    защитить свой дом, бизнес и близких, где бы они ни находились.
+                </p>
+            </div>
+            <div class="flex justify-center">
+                <!-- Placeholder для визуализации проекта -->
+                <img src="https://placehold.co/400x300/1d9bf0/ffffff?text=LaunchX+System" alt="LaunchX System"
+                     class="rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Аналитика и важность проекта -->
+<section id="analytics" class="py-20">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-10" data-translate="analytics-title">
+            Почему это важно? <br class="hidden sm:inline"> Статистика преступности в Узбекистане
+        </h2>
+        <div class="bg-[#161b22] p-8 rounded-2xl shadow-xl space-y-6">
+            <p class="text-lg text-[#8b949e]" data-translate="analytics-p1">
+                По данным, опубликованным в различных источниках, в 2024 году в Узбекистане наблюдался рост числа
+                зарегистрированных преступлений. Например, общее количество преступлений превысило 132 тысячи, что
+                является значительным увеличением по сравнению с предыдущим годом. Уровень преступности на 10 тысяч
+                населения вырос, особенно в крупных городах, таких как Ташкент.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 text-[#8b949e]">
+                <div class="flex items-start space-x-4">
+                    <svg class="w-8 h-8 text-[#1d9bf0] flex-shrink-0" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <div>
+                        <h3 class="font-semibold text-white" data-translate="analytics-card1-title">Убийства и тяжкие
+                            преступления</h3>
+                        <p data-translate="analytics-card1-text">За 2024 год в стране было зарегистрировано 273 случая
+                            умышленных убийств и покушений на убийство. Суды ежедневно рассматривают как минимум одно
+                            дело об убийстве. Это подчеркивает острую необходимость в системах, которые могут
+                            предотвратить или минимизировать последствия таких ситуаций.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <svg class="w-8 h-8 text-[#1d9bf0] flex-shrink-0" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <h3 class="font-semibold text-white" data-translate="analytics-card2-title">Пропавшие без
+                            вести</h3>
+                        <p data-translate="analytics-card2-text">Системы, позволяющие быстро подать сигнал о помощи,
+                            становятся критически важными, особенно в ситуациях, когда человек может оказаться в беде и
+                            не иметь возможности позвонить. В 2024 году было найдено 567 лиц, пропавших без вести, что
+                            указывает на актуальность проблемы.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-lg text-[#8b949e]" data-translate="analytics-p2">
+                Именно в таких условиях проект <span class="text-white font-semibold">LaunchX</span> становится не
+                просто удобным инструментом, а жизненно важной системой. Он позволяет мгновенно отправить тревожный
+                сигнал, используя простые и доступные устройства, что значительно сокращает время реакции и может спасти
+                жизни, предотвратить ограбления или помочь найти пропавшего человека.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Сферы применения (Use Cases) -->
+<section id="use-cases" class="py-20 bg-[#161b22]">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-10" data-translate="use-cases-title">
+            Кому нужен LaunchX?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 text-[#8b949e]">
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl flex flex-col items-center text-center space-y-4 transition duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 rounded-full bg-[#1d9bf0] flex items-center justify-center text-white text-3xl">
+                    👵
+                </div>
+                <h3 class="font-semibold text-xl text-white" data-translate="use-cases-card1-title">Частные лица</h3>
+                <p data-translate="use-cases-card1-text">Для создания SOS-кнопки для пожилых людей или детей,
+                    позволяющей мгновенно вызвать помощь.</p>
+            </div>
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl flex flex-col items-center text-center space-y-4 transition duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 rounded-full bg-[#1d9bf0] flex items-center justify-center text-white text-3xl">
+                    🏢
+                </div>
+                <h3 class="font-semibold text-xl text-white" data-translate="use-cases-card2-title">Бизнес и охрана</h3>
+                <p data-translate="use-cases-card2-text">Для мониторинга складов, офисов или других объектов, с
+                    оповещением сотрудников охраны.</p>
+            </div>
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl flex flex-col items-center text-center space-y-4 transition duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 rounded-full bg-[#1d9bf0] flex items-center justify-center text-white text-3xl">
+                    🧑‍💻
+                </div>
+                <h3 class="font-semibold text-xl text-white" data-translate="use-cases-card3-title">Разработчики
+                    IoT</h3>
+                <p data-translate="use-cases-card3-text">Для лёгкой интеграции собственных устройств (Arduino, ESP) с
+                    системой оповещения через API.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Как это работает -->
+<section id="how-it-works" class="py-20">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-10" data-translate="how-it-works-title">
+            Как это работает?
+        </h2>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-20 h-20 rounded-full bg-[#161b22] flex items-center justify-center text-white text-4xl shadow-md">
+                    1
+                </div>
+                <h4 class="font-semibold text-white" data-translate="how-it-works-step1-title">Регистрация</h4>
+                <p class="text-[#8b949e]" data-translate="how-it-works-step1-text">Запустите бота в Telegram и пройдите
+                    простую регистрацию.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-20 h-20 rounded-full bg-[#161b22] flex items-center justify-center text-white text-4xl shadow-md">
+                    2
+                </div>
+                <h4 class="font-semibold text-white" data-translate="how-it-works-step2-title">Привязка</h4>
+                <p class="text-[#8b949e]" data-translate="how-it-works-step2-text">Свяжите ваше физическое устройство с
+                    аккаунтом через бота.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-20 h-20 rounded-full bg-[#161b22] flex items-center justify-center text-white text-4xl shadow-md">
+                    3
+                </div>
+                <h4 class="font-semibold text-white" data-translate="how-it-works-step3-title">Настройка</h4>
+                <p class="text-[#8b949e]" data-translate="how-it-works-step3-text">Добавьте контакты, которые будут
+                    получать тревожные уведомления.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-20 h-20 rounded-full bg-[#161b22] flex items-center justify-center text-white text-4xl shadow-md">
+                    4
+                </div>
+                <h4 class="font-semibold text-white" data-translate="how-it-works-step4-title">Действие</h4>
+                <p class="text-[#8b949e]" data-translate="how-it-works-step4-text">При активации устройства, LaunchX
+                    мгновенно отправит сигнал.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Возможности расширения -->
+<section id="future" class="py-20 bg-[#161b22]">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-10" data-translate="features-title">
+            Наши возможности
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center text-[#8b949e]">
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl space-y-2">
+                <div class="w-12 h-12 inline-flex items-center justify-center text-white text-2xl mb-2">📞</div>
+                <h4 class="font-semibold text-white text-lg" data-translate="features-card1-title">Звонок на номер</h4>
+                <p data-translate="features-card1-text">При тревоге система автоматически совершит звонок на указанный
+                    номер телефона.</p>
+            </div>
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl space-y-2">
+                <div class="w-12 h-12 inline-flex items-center justify-center text-white text-2xl mb-2">💬</div>
+                <h4 class="font-semibold text-white text-lg" data-translate="features-card2-title">SMS-уведомление</h4>
+                <p data-translate="features-card2-text">Отправка тревожного SMS-сообщения на заданный номер
+                    телефона.</p>
+            </div>
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl space-y-2">
+                <div class="w-12 h-12 inline-flex items-center justify-center text-white text-2xl mb-2">🗺️</div>
+                <h4 class="font-semibold text-white text-lg" data-translate="features-card3-title">GPS-координаты</h4>
+                <p data-translate="features-card3-text">Вместе с сигналом тревоги отправляются точные GPS-координаты
+                    местоположения устройства.</p>
+            </div>
+            <div class="bg-[#0d1117] p-6 rounded-2xl shadow-xl space-y-2">
+                <div class="w-12 h-12 inline-flex items-center justify-center text-white text-2xl mb-2">🗂️</div>
+                <h4 class="font-semibold text-white text-lg" data-translate="features-card4-title">Панель</h4>
+                <p data-translate="features-card4-text">Удобная панель управления для мониторинга всех устройств и
+                    истории тревог.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<footer id="contact" class="py-10 bg-[#0d1117] text-[#8b949e]">
+    <div class="container mx-auto px-4 text-center">
+        <p data-translate="footer-text">&copy; 2025 LaunchX. Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+    // Объект с переводами
+    const translations = {
+        'ru': {
+            'page-title': 'LaunchX - Система тревожных оповещений',
+            'contact-button': 'Связаться с нами',
+            'hero-title': 'Ваша безопасность — <br class="hidden sm:inline"> наш приоритет. <span class="text-gradient block md:inline">LaunchX.</span>',
+            'hero-subtitle': 'Мгновенные тревожные оповещения и надёжное управление устройствами через Telegram. Защитите то, что для вас важно.',
+            'hero-button-1': 'Подробнее о проекте',
+            'hero-button-2': 'Примеры использования',
+            'project-title': 'О проекте LaunchX',
+            'project-p1': 'LaunchX — это интеллектуальная система мониторинга и экстренного оповещения. Мы выпускаем собственные физические устройства, такие как <span class="text-white font-semibold">тревожные браслеты и кнопки</span>, которые можно легко подключить к нашей системе.',
+            'project-p2': 'С помощью нашего Telegram-бота вы можете легко управлять всеми своими устройствами, привязывать номера телефонов и Telegram-аккаунты близких или сотрудников. В случае активации устройства, система мгновенно отправит тревожное оповещение всем указанным получателям.',
+            'project-p3': 'Наша цель — сделать современные технологии доступными и интуитивно понятными, чтобы каждый мог защитить свой дом, бизнес и близких, где бы они ни находились.',
+            'analytics-title': 'Почему это важно? <br class="hidden sm:inline"> Статистика преступности в Узбекистане',
+            'analytics-p1': 'По данным, опубликованным в различных источниках, в 2024 году в Узбекистане наблюдался рост числа зарегистрированных преступлений. Например, общее количество преступлений превысило 132 тысячи, что является значительным увеличением по сравнению с предыдущим годом. Уровень преступности на 10 тысяч населения вырос, особенно в крупных городах, таких как Ташкент.',
+            'analytics-card1-title': 'Убийства и тяжкие преступления',
+            'analytics-card1-text': 'За 2024 год в стране было зарегистрировано 273 случая умышленных убийств и покушений на убийство. Суды ежедневно рассматривают как минимум одно дело об убийстве. Это подчеркивает острую необходимость в системах, которые могут предотвратить или минимизировать последствия таких ситуаций.',
+            'analytics-card2-title': 'Пропавшие без вести',
+            'analytics-card2-text': 'Системы, позволяющие быстро подать сигнал о помощи, становятся критически важными, особенно в ситуациях, когда человек может оказаться в беде и не иметь возможности позвонить. В 2024 году было найдено 567 лиц, пропавших без вести, что указывает на актуальность проблемы.',
+            'analytics-p2': 'Именно в таких условиях проект <span class="text-white font-semibold">LaunchX</span> становится не просто удобным инструментом, а жизненно важной системой. Он позволяет мгновенно отправить тревожный сигнал, используя простые и доступные устройства, что значительно сокращает время реакции и может спасти жизни, предотвратить ограбления или помочь найти пропавшего человека.',
+            'use-cases-title': 'Кому нужен LaunchX?',
+            'use-cases-card1-title': 'Частные лица',
+            'use-cases-card1-text': 'Для создания SOS-кнопки для пожилых людей или детей, позволяющей мгновенно вызвать помощь.',
+            'use-cases-card2-title': 'Бизнес и охрана',
+            'use-cases-card2-text': 'Для мониторинга складов, офисов или других объектов, с оповещением сотрудников охраны.',
+            'use-cases-card3-title': 'Разработчики IoT',
+            'use-cases-card3-text': 'Для лёгкой интеграции собственных устройств (Arduino, ESP) с системой оповещения через API.',
+            'how-it-works-title': 'Как это работает?',
+            'how-it-works-step1-title': 'Регистрация',
+            'how-it-works-step1-text': 'Запустите бота в Telegram и пройдите простую регистрацию.',
+            'how-it-works-step2-title': 'Привязка',
+            'how-it-works-step2-text': 'Свяжите ваше физическое устройство с аккаунтом через бота.',
+            'how-it-works-step3-title': 'Настройка',
+            'how-it-works-step3-text': 'Добавьте контакты, которые будут получать тревожные уведомления.',
+            'how-it-works-step4-title': 'Действие',
+            'how-it-works-step4-text': 'При активации устройства, LaunchX мгновенно отправит сигнал.',
+            'features-title': 'Наши возможности',
+            'features-card1-title': 'Звонок на номер',
+            'features-card1-text': 'При тревоге система автоматически совершит звонок на указанный номер телефона.',
+            'features-card2-title': 'SMS-уведомление',
+            'features-card2-text': 'Отправка тревожного SMS-сообщения на заданный номер телефона.',
+            'features-card3-title': 'GPS-координаты',
+            'features-card3-text': 'Вместе с сигналом тревоги отправляются точные GPS-координаты местоположения устройства.',
+            'features-card4-title': 'Панель',
+            'features-card4-text': 'Удобная панель управления для мониторинга всех устройств и истории тревог.',
+            'footer-text': '&copy; 2025 LaunchX. Все права защищены.'
+        },
+        'en': {
+            'page-title': 'LaunchX - Alarm Notification System',
+            'contact-button': 'Contact Us',
+            'hero-title': 'Your safety is <br class="hidden sm:inline"> our priority. <span class="text-gradient block md:inline">LaunchX.</span>',
+            'hero-subtitle': 'Instant alarm notifications and reliable device management via Telegram. Protect what matters to you.',
+            'hero-button-1': 'Learn more about the project',
+            'hero-button-2': 'Use cases',
+            'project-title': 'About LaunchX Project',
+            'project-p1': 'LaunchX is an intelligent monitoring and emergency notification system. We produce our own physical devices, such as <span class="text-white font-semibold">alarm bracelets and buttons</span>, which can be easily connected to our system.',
+            'project-p2': 'Using our Telegram bot, you can easily manage all your devices and link phone numbers and Telegram accounts of your loved ones or employees. When a device is activated, the system instantly sends an alarm notification to all specified recipients.',
+            'project-p3': 'Our goal is to make modern technologies accessible and intuitive, so that everyone can protect their home, business, and loved ones, no matter where they are.',
+            'analytics-title': 'Why is this important? <br class="hidden sm:inline"> Crime statistics in Uzbekistan',
+            'analytics-p1': 'According to data published in various sources, in 2024, Uzbekistan saw an increase in the number of registered crimes. For example, the total number of crimes exceeded 132 thousand, which is a significant increase compared to the previous year. The crime rate per 10,000 population has risen, especially in large cities like Tashkent.',
+            'analytics-card1-title': 'Murders and serious crimes',
+            'analytics-card1-text': 'In 2024, there were 273 cases of intentional murders and attempted murders registered in the country. Courts review at least one murder case daily. This highlights the urgent need for systems that can prevent or minimize the consequences of such situations.',
+            'analytics-card2-title': 'Missing persons',
+            'analytics-card2-text': 'Systems that allow for quick calls for help are becoming critically important, especially in situations where a person may be in trouble and unable to make a phone call. In 2024, 567 missing persons were found, which indicates the relevance of the problem.',
+            'analytics-p2': 'It is in these conditions that the <span class="text-white font-semibold">LaunchX</span> project becomes not just a convenient tool, but a vital system. It allows you to instantly send an alarm signal using simple and accessible devices, which significantly reduces response time and can save lives, prevent robberies, or help find a missing person.',
+            'use-cases-title': 'Who needs LaunchX?',
+            'use-cases-card1-title': 'Private individuals',
+            'use-cases-card1-text': 'To create an SOS button for elderly people or children, allowing them to instantly call for help.',
+            'use-cases-card2-title': 'Business and security',
+            'use-cases-card2-text': 'For monitoring warehouses, offices, or other facilities, with notification of security personnel.',
+            'use-cases-card3-title': 'IoT developers',
+            'use-cases-card3-text': 'For easy integration of their own devices (Arduino, ESP) with the notification system via API.',
+            'how-it-works-title': 'How it works?',
+            'how-it-works-step1-title': 'Registration',
+            'how-it-works-step1-text': 'Start the bot in Telegram and go through a simple registration.',
+            'how-it-works-step2-title': 'Linking',
+            'how-it-works-step2-text': 'Link your physical device to your account through the bot.',
+            'how-it-works-step3-title': 'Setup',
+            'how-it-works-step3-text': 'Add contacts who will receive alarm notifications.',
+            'how-it-works-step4-title': 'Action',
+            'how-it-works-step4-text': 'When the device is activated, LaunchX will instantly send a signal.',
+            'features-title': 'Our capabilities',
+            'features-card1-title': 'Phone call',
+            'features-card1-text': 'In case of an alarm, the system will automatically make a call to the specified phone number.',
+            'features-card2-title': 'SMS notification',
+            'features-card2-text': 'Sending an alarm SMS message to the specified phone number.',
+            'features-card3-title': 'GPS coordinates',
+            'features-card3-text': 'Along with the alarm signal, the exact GPS coordinates of the device\'s location are sent.',
+            'features-card4-title': 'Admin panel',
+            'features-card4-text': 'A convenient control panel for monitoring all devices and alarm history.',
+            'footer-text': '&copy; 2025 LaunchX. All rights reserved.'
+        }
+    };
+
+    const languageButtons = document.querySelectorAll('.lang-button');
+    const langRuButton = document.getElementById('lang-ru');
+    const langEnButton = document.getElementById('lang-en');
+
+    // Функция для установки языка
+    function setLanguage(lang) {
+        // Обновляем атрибут lang у html
+        document.documentElement.lang = lang;
+
+        // Обновляем текст на странице
+        for (const key in translations[lang]) {
+            const element = document.querySelector(`[data-translate="${key}"]`);
+            if (element) {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+
+        // Обновляем состояние кнопок языка
+        languageButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+        if (lang === 'ru') {
+            langRuButton.classList.add('active');
+        } else {
+            langEnButton.classList.add('active');
+        }
+
+        // Сохраняем выбор в localStorage
+        localStorage.setItem('lang', lang);
+    }
+
+    // Обработчики событий для кнопок
+    langRuButton.addEventListener('click', () => setLanguage('ru'));
+    langEnButton.addEventListener('click', () => setLanguage('en'));
+
+    // Загрузка языка при загрузке страницы
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('lang') || 'ru'; // По умолчанию русский
+        setLanguage(savedLang);
+    });
+</script>
+</body>
+</html>
